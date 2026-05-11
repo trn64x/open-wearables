@@ -56,3 +56,5 @@ if [ "$ENVIRONMENT" = "local" ]; then
 else
     uv run fastapi run app/main.py --host 0.0.0.0 --port "${API_PORT:-8000}"
 fi
+echo "Starting API server..."
+exec uv run uvicorn app.main:app --host 0.0.0.0 --port 8000
