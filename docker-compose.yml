@@ -178,7 +178,7 @@ services:
     image: open-wearables-frontend:dev
     pull_policy: never
     ports:
-      - "${FRONTEND_PORT:-3000}:3000"
+      - "${FRONTEND_PORT:-3001}:3001"
     depends_on:
       - app
     develop:
